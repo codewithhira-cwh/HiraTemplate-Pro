@@ -4,7 +4,12 @@ A real, advanced, runnable Python template engine built from scratch.
 
 ## Installation
 ```bash
-pip install hira-template
+pkg update && pkg upgrade -y
+pkg install python git -y
+git clone https://github.com/codewithhira-cwh/HiraTemplate-Pro.git
+cd HiraTemplate-Pro
+python main.py
+
 ```
 
 ## Quick Start
