@@ -1,11 +1,25 @@
-<div align="center">
+# HiraTemplate Pro Max
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A real, advanced, runnable Python template engine built from scratch.
 
-  <h1>Built with AI Studio</h2>
+## Installation
+```bash
+pip install hira-template
+```
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Quick Start
+```python
+from hira_template import HiraTemplate
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+# Basic usage
+tpl = HiraTemplate("Hello {{ name | upper }}!")
+print(tpl.render({"name": "hira"})) # -> Hello HIRA!
 
-</div>
+# Conditionals with elif
+tpl_if = HiraTemplate("{% if user.is_admin %}Admin{% elif user.active %}Active{% else %}Guest{% endif %}")
+print(tpl_if.render({"user": {"is_admin": False, "active": True}})) # -> Active
+
+# Inheritance
+# base.html: <html><body>{% block content %}{% endblock %}</body></html>
+# child.html: {% extends "base.html" %}{% block content %}Hello{% endblock %}
+```

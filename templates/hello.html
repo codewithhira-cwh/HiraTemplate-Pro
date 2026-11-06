@@ -1,0 +1,26 @@
+{# HiraTemplate Pro Max - Showcase Template #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title | upper | trim | default("Student Report") }}</title>
+</head>
+<body>
+  <h1>Welcome, {{ user.name | title }}!</h1>
+  <p>Status: {% if topper %}Top Ranker 🏆{% else %}Active Learner 📚{% endif %}</p>
+
+  <h2>Course: {{ course.name | default("Computer Science") }}</h2>
+  <p>Top Subject: {{ subjects[0] | upper }}</p>
+
+  <h3>Student Roster (Total: {{ students | length }})</h3>
+  <ul>
+    {% for s in students %}
+    <li>#{{ loop.index }} - {{ s.name }} (Score: {{ s.score | default(0) }}){% if loop.first %} - [First]{% endif %}{% if loop.last %} - [Last]{% endif %}</li>
+    {% endfor %}
+  </ul>
+
+  <footer>
+    <p>Rendered with HiraTemplate Pro Max | Missing note: {{ missing_info | default("None") }}</p>
+  </footer>
+</body>
+</html>

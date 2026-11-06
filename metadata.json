@@ -1,0 +1,6 @@
+{
+  "name": "HiraTemplate Pro Max - Python Template Engine",
+  "description": "A real, advanced, runnable Python template engine featuring Lexer, AST Parser, LRU Cache, Dot/Index Access, Filters, and Interactive Web Playground.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
